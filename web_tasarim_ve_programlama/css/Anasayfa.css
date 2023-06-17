@@ -1,0 +1,81 @@
+﻿body {
+    margin: 0;
+    background-color: #F8EEE1;
+}
+
+.navbar {
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    margin: 10px;
+    background: none;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+.navbar-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+    .navbar-links li {
+        margin-right: 20px;
+    }
+
+        .navbar-links li:last-child {
+            margin-right: 0;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+.navbar-buttons .button {
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.navbar-signup {
+    color: #fff;
+    background-color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+    .navbar-signup:hover {
+        cursor: pointer;
+    }
+
+.navbar-login {
+    color: #333;
+    margin-right: 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: deepskyblue;
+}
+
+
+.navbar {
+    background-color: transparent;
+    box-shadow: 0 0 36px 0;
+    backdrop-filter: blur(3px);
+}

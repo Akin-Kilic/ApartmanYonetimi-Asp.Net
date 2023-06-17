@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Anasayfa.master.cs" Inherits="web_tasarim_ve_programlama.Anasayfa" %>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Apartment Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/AboutUs.css">
+
+    <link rel="stylesheet" type="text/css" href="css/ContactUs.css">
+
+    <link rel="stylesheet" type="text/css" href="css/Login.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/Register.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/Anasayfa.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script>
+        function CheckOnlyOne(checkbox) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function (cb) {
+                if (cb !== checkbox) {
+                    cb.checked = false;
+                }
+            });
+        }
+    </script>
+
+    <style>
+        body {
+            background: #F8EEE1;
+        }
+        #formNav{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="formNav" runat="server">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                LOGO
+            </div>
+            <ul class="navbar-links">
+                <li><a href="Default.aspx">ANASAYFA</a></li>
+                <li><a href="AboutUs.aspx">HAKKIMIZDA</a></li>
+                <li><a href="ContactUs.aspx">İLETİŞİM</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <asp:Button runat="server" CssClass="navbar-login button" ID="btnLogin" Text="LOGIN" OnClick="btnLogin_Click" />
+                <asp:Button runat="server" CssClass="navbar-signup button" ID="btnSignup" Text="SIGNUP" OnClick="btnSignup_Click" />
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+
+
+
+
+
+
+</body>
+</html>
+

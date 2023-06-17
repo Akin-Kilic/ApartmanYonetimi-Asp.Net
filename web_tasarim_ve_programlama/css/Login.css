@@ -1,0 +1,60 @@
+﻿
+/* Form alanı */
+.container-login {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    color: #000000;
+    border-radius: 5px;
+}
+
+/* Etiketler */
+.label1,
+.label2 {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Giriş butonu */
+.buton1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: wheat;
+}
+
+    .buton1:hover {
+        background-color: #0056b3;
+    }
+
+
+/* İnput alanları */
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.tboxSifre {
+    display: block;
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+/* Responsive tasarım için medya sorguları */
+@media (max-width: 600px) {
+    .Content1 {
+        max-width: 100%;
+    }
+}

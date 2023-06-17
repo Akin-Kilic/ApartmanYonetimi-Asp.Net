@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="web_tasarim_ve_programlama.Admin" %>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Apartment Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/Anasayfa.css">
+    <link rel="stylesheet" type="text/css" href="css/AdminAnasayfa.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .navbar {
+            background-color: #2d9682;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="formAdmin" runat="server">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                LOGO
+            </div>
+            <ul class="navbar-links">
+                <li><a href="AdminAcceptManager.aspx">
+                    <h1>BAŞVURULAR</h1>
+                </a></li>
+                <li><a href="Messages.aspx">
+                    <h1>MESAJLAR</h1>
+                </a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <asp:Button runat="server" CssClass="navbar-signup" ID="btnSignup" Text="Çıkış Yap" OnClick="btnSignup_Click" />
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

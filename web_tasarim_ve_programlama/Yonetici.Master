@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Yonetici.master.cs" Inherits="web_tasarim_ve_programlama.Yonetici" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/Anasayfa.css">
+    <link rel="stylesheet" type="text/css" href="css/YoneticiMaster.css">
+    <style>
+        body {
+            color: white;
+            font-size: 20px;
+        }
+
+        .custom-tree-node {
+            color: black;
+        }
+
+            .custom-tree-node:hover {
+                text-decoration: underline;
+            }
+
+
+
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .submenu-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 100%;
+            top: 0;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .submenu:hover .submenu-content {
+            display: block;
+        }
+
+        .dropdown-content a,
+        .submenu-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover,
+            .submenu-content a:hover {
+                background-color: #ddd;
+            }
+
+        .submenu {
+            position: relative;
+        }
+    </style>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body bgcolor="#1B2B47">
+    <form id="formNav" runat="server">
+        <div>
+            <nav class="navbar" style="height: 75px; background-color: #0095F7; border-radius: 25px; margin-bottom: 50px">
+                <div class="navbar-logo">
+                    LOGO
+                </div>
+                <ul class="navbar-links">
+                    <li><a href="YoneticiAcceptManager.aspx">BAŞVURULAR</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">İŞLEMLER</a>
+                        <div class="dropdown-content">
+                            <a href="FlatOp.aspx">Daire İşlemleri</a>
+                            <a href="DuesOp.aspx">Aidat İşlemleri</a>
+                            <div class="submenu">
+                                <a href="#">Toplantı İşlemleri</a>
+                                <div class="submenu-content">
+                                    <a href="MeetingOp.aspx">Toplantılar</a>
+                                    <a href="AddMeeting.aspx">Toplantı Ekle</a>
+                                </div>
+                            </div>
+                            <div class="submenu">
+                                <a href="#">Gelir İşlemleri</a>
+                                <div class="submenu-content">
+                                    <a href="IncomeOp.aspx">Gelirler</a>
+                                    <a href="AddIncome.aspx">Gelir Ekle</a>
+                                </div>
+                            </div>
+                            <div class="submenu">
+                                <a href="javascript:void(0);">Gider İşlemleri</a>
+                                <div class="submenu-content">
+                                    <a href="ExpenseOp.aspx">Giderler</a>
+                                    <a href="AddExpense.aspx">Gider Ekle</a>
+                                </div>
+                            </div>
+                            <a href="CashOp.aspx">Kasa Bilgileri</a>
+                            <a href="UpdateInformationManager.aspx">Bilgilerimi Güncelle</a>
+
+                        </div>
+                    </li>
+                </ul>
+                <div class="navbar-buttons">
+                    <asp:Button runat="server" CssClass="navbar-signup" ID="btnSignup" Text="Çıkış Yap" OnClick="btnSignup_Click" />
+                </div>
+            </nav>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+</body>
+</html>
